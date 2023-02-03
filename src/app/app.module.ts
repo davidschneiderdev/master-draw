@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FormsModule } from '@angular/forms';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule, 
+    FormsModule,
     MatButtonModule,
     MatCardModule,
     MatMenuModule,

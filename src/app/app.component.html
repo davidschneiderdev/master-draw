@@ -1,16 +1,6 @@
 <mat-drawer-container class="example-container" autosize>
 
-  <input
-    placeholder="Email"
-    name="Email"
-    type="email"
-  >
-
-  <input
-    placeholder="Password"
-    name="Password"
-    type="password"
-  >
+  
     
     <mat-toolbar class="toolbar-background">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
@@ -18,6 +8,54 @@
     </button>
     <span>Master Draw</span>
     <span class="example-spacer"></span>
+
+    <form #signUpForm="ngForm" (ngSubmit)="handleRegister(signUpForm.value)">
+
+      <input
+        placeholder="Name"
+        name="name"
+        type="text"
+        ngModel
+      >
+      
+      <input
+        placeholder="Email"
+        name="email"
+        type="email"
+        ngModel
+      >
+
+      <input
+        placeholder="Password"
+        name="password"
+        type="password"
+        ngModel
+      >
+
+      <button>Sign Up</button>
+
+    </form>
+
+    <form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+
+      <input
+        placeholder="Email"
+        name="email"
+        type="email"
+        ngModel
+      >
+
+      <input
+        placeholder="Password"
+        name="password"
+        type="password"
+        ngModel
+      >
+
+      <button>Login</button>
+
+    </form>
+    
     
     <mat-icon>dark_mode</mat-icon>
     <mat-slide-toggle></mat-slide-toggle>
@@ -40,6 +78,14 @@
         <button mat-stroked-button routerLink="/rembrandt-images" routerLinkActive="active" ariaCurrentWhenActive="page">Rembrandt</button>
       </div>
     </section>
+
+    <ul>
+      <li *ngFor="let item of data">
+        {{item.email}}
+        {{item.name}}
+        {{item.password}}
+      </li>
+    </ul>
 
     <router-outlet></router-outlet>
 
