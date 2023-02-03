@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "master-draw": {
+      "hosting": {
+        "master-draw": [
+          "master-draw"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "master-draw"
+  }
+}
